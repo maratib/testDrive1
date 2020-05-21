@@ -2,6 +2,7 @@ import colors from 'vuetify/es5/util/colors';
 
 export default {
   mode: 'universal',
+
   /*
   ** Headers of the page
   */
@@ -30,6 +31,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-notification', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -69,6 +71,11 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
+        },
+        light: {
+          primary: "#4ac2e1",
+          myblue: "#4ac2e1",
+
         }
       }
     }

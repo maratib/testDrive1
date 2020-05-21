@@ -1,17 +1,22 @@
 <template>
   <div>
-    <h1 style="background: #f8f8f8">Home Page</h1>
+    <h1>Home Page</h1>
 
-    <div style="background: #f8f8f8">
-      <h3>Current known suppliers</h3>
-
-      <h3>Suppliers in the market</h3>
+    <div class="pa-5" style="background: #f8f8f8">
+      <Suppliers titleText="Current known suppliers" class="mb-5" />
+      <SuppliersInMarket />
     </div>
+    <notifications group="items" position="bottom right" />
   </div>
 </template>
 
 <script>
+import Suppliers from "@/components/tables/Suppliers";
+import SuppliersInMarket from "@/components/tables/SuppliersInMarket";
 export default {
-  components: {}
+  components: {
+    Suppliers,
+    SuppliersInMarket
+  }
 };
 </script>

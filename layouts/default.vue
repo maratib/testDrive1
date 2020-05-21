@@ -32,10 +32,10 @@
 <script>
 import UserMenu from "@/components/menus/UserMenu";
 export default {
+  components: {
+    UserMenu
+  },
   data() {
-    components: {
-      UserMenu;
-    }
     return {
       clipped: false,
       drawer: false,
