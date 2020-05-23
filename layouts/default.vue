@@ -22,6 +22,7 @@
     </v-app-bar>
     <v-content>
       <v-container>
+        <Breadcrumb />
         <nuxt />
       </v-container>
     </v-content>
@@ -35,11 +36,13 @@
 import UserMenu from "@/components/menus/UserMenu";
 import Langs from "@/components/misc/Langs";
 import Gdpr from "@/components/misc/Gdpr";
+import Breadcrumb from "@/components/misc/Breadcrumb";
 export default {
   components: {
     UserMenu,
     Langs,
-    Gdpr
+    Gdpr,
+    Breadcrumb
   },
   data() {
     return {
