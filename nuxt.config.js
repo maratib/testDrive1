@@ -1,3 +1,5 @@
+require('dotenv').config();
+const i18n = require('./locales');
 import colors from 'vuetify/es5/util/colors';
 
 export default {
@@ -31,6 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/GDPR.js', mode: 'client' },
+    { src: '~/plugins/vee-validate' },
     { src: '~/plugins/vue-notification', ssr: false }
   ],
   /*
@@ -47,6 +51,7 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    ['nuxt-i18n', i18n],
   ],
   /*
   ** Axios module configuration
@@ -88,6 +93,9 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-    }
+    },
+    transpile: [
+      'vee-validate'
+    ]
   }
 };

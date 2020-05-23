@@ -8,7 +8,7 @@
       </template>
       <v-card>
         <v-list>
-          <v-list-item class="mt-n2">
+          <v-list-item class="mt-n2" :to="localePath('/login')">
             <v-list-item-icon>
               <v-icon>mdi-login-variant</v-icon>
             </v-list-item-icon>
@@ -17,7 +17,7 @@
             </v-list-item-content>
           </v-list-item>
           <v-divider></v-divider>
-          <v-list-item class="mb-n2">
+          <v-list-item class="mb-n2" :to="localePath('/register')">
             <v-list-item-icon>
               <v-icon>mdi-account-circle</v-icon>
             </v-list-item-icon>

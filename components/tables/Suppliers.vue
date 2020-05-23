@@ -23,7 +23,8 @@
           <v-spacer></v-spacer>
         </v-toolbar>
       </template>
-      <template v-slot:item.current="{ item }">
+      <template v-slot:item.name="{ item }">
+        {{item.name}}
         <v-icon small class="myblue--text" v-if="item.current" title="Current Supplier">mdi-check</v-icon>
       </template>
       <!-- <template v-slot:item.name="{ item }">
@@ -96,6 +97,13 @@
                     <v-col cols="12">
                       <v-text-field v-model="editedItem.location" label="Location"></v-text-field>
                     </v-col>
+                    <v-col cols="12">
+                      <v-switch
+                        v-model="editedItem.current"
+                        class="mx-2"
+                        label="Is current supplier?"
+                      ></v-switch>
+                    </v-col>
                     <v-col cols="6">
                       <!-- <v-text-field v-model="editedItem.prating" label="Performance Rating"></v-text-field> -->
                       <span class="caption">Performance Rating</span>
@@ -149,12 +157,6 @@ export default {
     loading: false,
     search: "",
     headers: [
-      {
-        text: "",
-        value: "current",
-        class: "myblue--text",
-        sortable: false
-      },
       {
         text: "COMPANY NAME",
         align: "start",

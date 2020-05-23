@@ -16,7 +16,9 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
+      <Langs />
       <UserMenu v-if="true" class="mx-3" />
+      <!-- <Gdpr /> -->
     </v-app-bar>
     <v-content>
       <v-container>
@@ -31,9 +33,13 @@
 
 <script>
 import UserMenu from "@/components/menus/UserMenu";
+import Langs from "@/components/misc/Langs";
+import Gdpr from "@/components/misc/Gdpr";
 export default {
   components: {
-    UserMenu
+    UserMenu,
+    Langs,
+    Gdpr
   },
   data() {
     return {
