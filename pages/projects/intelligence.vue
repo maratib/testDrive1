@@ -1,21 +1,15 @@
 <template>
-  <div>
-    <h1>Welcome to our TestDrive App.</h1>
-    <p>
-      Please visit our projects page, and see the working samples
-      <span
-        class="red--text"
-      >under Intelligence tab.</span>
-
-      <br />
-      <br />Best regards,
-    </p>
+  <div class="pa-5">
+    <Suppliers titleText="Current known suppliers" class="ma-5 elevation-2" />
+    <br />
+    <AvailableSuppliers titleText="Suppliers in the market" class="ma-5 elevation-2" />
   </div>
 </template>
 
 <script>
 import Suppliers from "@/components/tables/Suppliers";
 import AvailableSuppliers from "@/components/tables/AvailableSuppliers";
+
 export default {
   components: {
     Suppliers,
@@ -23,3 +17,6 @@ export default {
   }
 };
 </script>
+
+<style>
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div style="min-height: 22px; background: red">
+  <div style="min-height: 22px;" class="mb-5">
     <v-breadcrumbs class="pa-0 ma-0" :items="crumbs">
       <template v-slot:divider>
         <v-icon>mdi-chevron-right</v-icon>
@@ -7,7 +7,7 @@
       <template v-slot:item="{ item }">
         <v-breadcrumbs-item
           :href="localePath(item.path)"
-          :disabled="item.active"
+          :disabled="item.disabled"
         >{{ item.name.toUpperCase() }}</v-breadcrumbs-item>
       </template>
     </v-breadcrumbs>
@@ -30,11 +30,11 @@ export default {
         for (let i = 0; i < fullPath.length; i++) {
           let path = fullPath[i];
           currentPath += path || "";
-          let active = i === fullPath.length - 1 ? true : false;
+          let disabled = i === fullPath.length - 1 ? true : false;
           let item = {
             path: currentPath,
             name: path || "Home",
-            active: active
+            disabled: disabled
           };
           if (path) {
             currentPath += "/";

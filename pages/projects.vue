@@ -1,25 +1,30 @@
 <template>
   <div>
-    <h1>Projects</h1>
+    <h1
+      class="headline mb-3 blue-grey--text"
+      style="letter-spacing:2px !important;"
+    >SP00321 Brackets Q2/2020</h1>
 
-    <div class="pa-5" style="background: #f8f8f8">
-      <Suppliers titleText="Current known suppliers" class="ma-5 elevation-2" />
-      <br />
-      <AvailableSuppliers titleText="Suppliers in the market" class="ma-5 elevation-2" />
-    </div>
-    <notifications group="items" position="bottom right" />
+    <ProjectTabs />
+
+    <v-container style="background: #f8f8f8">
+      <NuxtChild></NuxtChild>
+      <notifications group="items" position="bottom right" />
+    </v-container>
   </div>
 </template>
 
 <script>
-import Breadcrumb from "@/components/misc/Breadcrumb";
-import Suppliers from "@/components/tables/Suppliers";
-import AvailableSuppliers from "@/components/tables/AvailableSuppliers";
+import ProjectTabs from "@/components/projects/ProjectTabs";
 export default {
   components: {
-    Breadcrumb,
-    Suppliers,
-    AvailableSuppliers
+    ProjectTabs
   }
 };
 </script>
+
+<style scoped>
+.tab-title {
+  letter-spacing: 2px;
+}
+</style>

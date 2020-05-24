@@ -12,9 +12,12 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app dark>
+    <v-app-bar :clipped-left="clipped" fixed app dark color="blue-grey darken-1">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+      <nuxt-link :to="localePath('/')" class="clear">
+        <v-toolbar-title v-text="title" />
+      </nuxt-link>
+      <v-btn :to="localePath('/projects')" class="ml-5">Projects</v-btn>
       <v-spacer />
       <Langs />
       <UserMenu v-if="true" class="mx-3" />
@@ -56,6 +59,11 @@ export default {
           to: "/"
         },
         {
+          icon: "mdi-apps",
+          title: "Projects",
+          to: "/projects"
+        },
+        {
           icon: "mdi-chart-bubble",
           title: "About",
           to: "/about"
@@ -69,3 +77,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.clear {
+  text-decoration: none;
+}
+</style>
