@@ -2,11 +2,11 @@
   <div>
     <h1>Welcome to our TestDrive App.</h1>
     <p>
-      Please visit our projects page, and see the working samples
+      Please visit our projects page, and see the working samples under
       <span
         class="red--text"
-      >under Intelligence tab.</span>
-
+      >Intelligence -> Suppliers</span>
+      tab.
       <br />
       <br />Best regards,
     </p>

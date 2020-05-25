@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card style="background: #f8f8f8">
     <v-tabs background-color="blue-grey darken-1" height="4em" center-active dark>
       <v-tab :to="localePath('/projects')">
         <v-row>

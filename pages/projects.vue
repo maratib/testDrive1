@@ -7,7 +7,7 @@
 
     <ProjectTabs />
 
-    <v-container style="background: #f8f8f8">
+    <v-container style="background: #f8f8f8" class="ma-0 pa-0">
       <NuxtChild></NuxtChild>
       <notifications group="items" position="bottom right" />
     </v-container>
