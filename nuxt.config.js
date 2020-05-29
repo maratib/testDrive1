@@ -20,7 +20,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap'
+        href: 'https://use.typekit.net/ydj8dml.css'
       }
     ]
   },
@@ -84,8 +84,8 @@ export default {
           success: colors.green.accent3,
         },
         light: {
-          primary: "#4ac2e1",
-          myblue: "#4ac2e1",
+          primary: "#4490d8",
+          myblue: "#4490d8",
 
         }
       }

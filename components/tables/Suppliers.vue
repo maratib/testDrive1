@@ -6,6 +6,10 @@
       :headers="headers"
       :items="items"
       :search="search"
+      :single-expand="singleExpand"
+      :expanded.sync="expanded"
+      item-key="name"
+      show-expand
       sort-by="name"
       :hide-default-footer="true"
     >
@@ -53,6 +57,9 @@
       <template v-slot:item.actions="{ item }">
         <v-icon small class="mr-2" @click="editItem(item)" title="Edit">mdi-pencil</v-icon>
         <v-icon small @click="deleteItem(item)" title="Delete">mdi-delete</v-icon>
+      </template>
+      <template v-slot:expanded-item="{ headers, item }">
+        <td :colspan="headers.length">More info about {{ item.name }}</td>
       </template>
       <template v-slot:footer>
         <v-toolbar flat color="white">
@@ -155,6 +162,8 @@ export default {
     rating: 4.5,
     dialog: false,
     loading: false,
+    expanded: [],
+    singleExpand: true,
     search: "",
     headers: [
       {
